@@ -5,8 +5,9 @@
       :value="value"
       v-bind="$attrs"
       @change="$emit('update:modelValue', value)"
+      :id="uuid"
     />
-  <label v-if="label">{{ label }}</label>
+  <label :for="uuid" v-if="label">{{ label }}</label>
 </template>
 
 <script>
